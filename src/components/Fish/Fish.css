@@ -1,0 +1,14 @@
+.card{
+    background: lightgreen;
+    border-radius: 3%;
+    height: 250px;
+    width: 325px;
+    position: relative;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+}
+
+.fish-img{
+    height: auto;
+    width: 90%;
+    
+}
