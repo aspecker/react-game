@@ -1,72 +1,72 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "image": "./assets/images/barracuda.jpg",
         "clicked": false,
         "name": "Barracuda"
     }, 
     {
-        "id": 2,
+        "id": 1,
         "image": "./assets/images/flounder.jpg",
         "clicked": false,
         "name": "Flounder"
     }, 
     {
-        "id": 3,
+        "id": 2,
         "image": "./assets/images/frogfish.jpeg",
         "clicked": false,
         "name": "Frogfish"
     }, 
     {
-        "id": 4,
+        "id": 3,
         "image": "./assets/images/grouper.jpg",
         "clicked": false,
         "name": "Grouper"
     }, 
     {
-        "id": 5,
+        "id": 4,
         "image": "./assets/images/juv-cowfish.jpg",
         "clicked": false,
         "name": "Juvenile Cowfish"
     }, 
     {
-        "id": 6,
+        "id": 5,
         "image": "./assets/images/juv-drum.jpg",
         "clicked": false,
         "name": "Juvenile Drumfish"
     }, 
     {
-        "id": 7,
+        "id": 6,
         "image": "./assets/images/lionfish.jpg",
         "clicked": false,
         "name": "Lionfish"
     }, 
     {
-        "id": 8,
+        "id": 7,
         "image": "./assets/images/moray.jpg",
         "clicked": false,
         "name": "Moray Eel"
     }, 
     {
-        "id": 9,
+        "id": 8,
         "image": "./assets/images/octopus.jpg",
         "clicked": false,
         "name": "Octopus"
     }, 
     {
-        "id": 10,
+        "id": 9,
         "image": "./assets/images/sailfish.jpg",
         "clicked": false,
         "name": "Sailfish"
     }, 
     {
-        "id": 11,
+        "id": 10,
         "image": "./assets/images/scorpionfish.jpg",
         "clicked": false,
         "name": "Scorpionfish"
     }, 
     {
-        "id": 12,
+        "id": 11,
         "image": "./assets/images/sunfish.jpg",
         "clicked": false,
         "name": "Sunfish"

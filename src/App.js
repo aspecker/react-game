@@ -12,6 +12,7 @@ const App = () => (
     <Nav />
     <Wrapper>
         <Route exact path ='/' component={Landing} />
+        <Route exact path = 'landing' component={Landing} />
         <Route exact path = '/game' component={Game} />
     </Wrapper>
     <Footer />
