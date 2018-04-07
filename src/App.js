@@ -1,47 +1,22 @@
-import React, { Component } from 'react';
-import Wrapper from './components/Wrapper'
-import Fish from './components/Fish';
+import React  from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Landing from './pages/Landing';
+import Game from './pages/Game';
+import Wrapper from './components/Wrapper';
 import Nav from './components/Nav';
-import fish from './fish.json'
+import Footer from './components/Footer';
 
-
-
-class App extends Component {
-
-    state = {
-        fish
-    };
-
-    handleClick = id => {
-        this.setState({
-            clickCount: clickCount++
-        }, () =>{
-            console.log(this.clickCount);
-        })
-    }
-
-
-    
- 
-
-    render () {
-        return (
-        <Wrapper>
-            <Nav />
-                {this.state.fish.map(fish=>(
-                    <Fish 
-                    id={fish.id}
-                    key = {fish.id}
-                    name = {fish.name}
-                    image={fish.image}
-                    clicks = {fish.clickCount}
-                    handleClick = {this.handleClick}
-                    />
-                ))}
-    
-        </Wrapper>
-        ); //end of return
-    } // end of render function
-} // end of class App
+const App = () => (
+<Router>
+    <div>
+    <Nav />
+    <Wrapper>
+        <Route exact path ='/' component={Landing} />
+        <Route exact path = '/game' component={Game} />
+    </Wrapper>
+    <Footer />
+    </div>
+</Router>
+); 
 
 export default App;
