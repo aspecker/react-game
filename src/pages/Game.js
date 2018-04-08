@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Fish from '../components/Fish';
-import fishList from '../utils/fishList.json';
+import fishArr from '../utils/fishList.json';
 import Container from '../components/Container';
 import Col from '../components/Col';
 import Row from '../components/Row';
@@ -11,7 +11,7 @@ class Game extends Component {
     
     state = {
 
-        fishList: fishList,
+        fishList: fishArr,
         score: 0,
         highScore: 0,
         wins: 0,
@@ -38,15 +38,26 @@ class Game extends Component {
 
     handleClick = id =>{
         const newScore = this.state.score + 1;
+        if (newScore>5){
+            // alert('Win');
+            this.resetState();
+            return;
+        }
         const fishList = this.state.fishList;
         const newFishList = this.arraySlice (fishList,id);
-        this.setState({score: newScore, fishList: newFishList})
-        console.log(this.state);
+        this.setState({score: newScore, fishList: newFishList},()=>{
+            console.log(this.state);
+        })
+        
         
     };
 
     // resets state to default values on game end
-    resetState 
+   resetState = () =>{
+       const scoreReset = 0;
+       const fishReset = fishArr;
+       this.setState({score: scoreReset, fishList: fishReset});
+   }
 
 
 
