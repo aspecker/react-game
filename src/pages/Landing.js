@@ -23,16 +23,12 @@ class Landing extends Component {
        
     }
 
-    handleQuote = () => {
-
-    }
-
     render () {
     return (
     <div>
-        <Hero backgroundImage='https://ak4.picdn.net/shutterstock/videos/5304824/thumb/1.jpg?i10c=img.resize(height:160)'>
+        <Hero backgroundImage='https://ak1.picdn.net/shutterstock/videos/2761841/thumb/1.jpg?i10c=img.resize(height:160)'>
             <h1>Fish Memory Game</h1>
-            <h3> Click <Link to ='/game'>here</Link> to play.</h3>
+            <h2> Click <Link className = 'home-link' to ='/game'>here</Link> to play.</h2>
             <Quote text={this.state.quote} author={this.state.author}/>
 
         </Hero>

@@ -3,6 +3,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    background-image: url('https://ak1.picdn.net/shutterstock/videos/2761841/thumb/1.jpg?i10c=img.resize(height:160)')
   }
   
   .hero::after {
@@ -30,5 +31,8 @@
     font-size: 60px;
     padding-top: 140px;
     margin-top: 0;
+  }
+  .home-link{
+    color: darkslategray;
   }
   
