@@ -81,7 +81,7 @@ class Game extends Component {
             this.setState({highScore: score})
         }
         const scoreReset = 0;
-        const fishReset = shuffleArray(fishArr);
+        const fishReset = this.shuffleArray(fishArr);
         this.setState({score: scoreReset, fishList: fishReset});
     };
 
