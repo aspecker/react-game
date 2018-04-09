@@ -53,7 +53,7 @@ class Game extends Component {
     }
 
     // GAME PLAY FUNCTIONS
-    // on click function, execture helper functions to update fish click status, score, and detect win or loss
+    // on click function, execute helper functions to update fish click status, score, and detect win or loss
     handleClick = id =>{
         const newScore = this.state.score + 1;
         const fishIndex = this.findFishIndex(this.state.fishList, id);
@@ -81,7 +81,7 @@ class Game extends Component {
             this.setState({highScore: score})
         }
         const scoreReset = 0;
-        const fishReset = fishArr;
+        const fishReset = shuffleArray(fishArr);
         this.setState({score: scoreReset, fishList: fishReset});
     };
 
