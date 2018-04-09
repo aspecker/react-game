@@ -5,15 +5,18 @@ import Game from './pages/Game';
 import Wrapper from './components/Wrapper';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import Overlay from './components/Overlay';
 
 const App = () => (
 <Router>
     <div>
     <Nav />
     <Wrapper>
+        <Overlay>
         <Route exact path ='/' component={Landing} />
         <Route exact path = 'landing' component={Landing} />
         <Route exact path = '/game' component={Game} />
+        </Overlay>
     </Wrapper>
     <Footer />
     </div>

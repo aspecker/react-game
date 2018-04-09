@@ -106,7 +106,7 @@ class Game extends Component {
             <Container >
             <Row>
                 <Col size='md-12'>
-                    <Scoreboard highScore = {this.state.highScore} score = {this.state.score} wins = {this.state.wins} losses={this.state.losses}> RANDOM TEXT </Scoreboard>
+                    <Scoreboard highScore = {this.state.highScore} score = {this.state.score} wins = {this.state.wins} losses={this.state.losses}/>
                 </Col>
             </Row>
             <div className = 'game-div'>

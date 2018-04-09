@@ -30,14 +30,7 @@ class Landing extends Component {
             <h1>Fish Memory Game</h1>
             <h2> Click <Link className = 'home-link' to ='/game'>here</Link> to play.</h2>
             <Quote text={this.state.quote} author={this.state.author}/>
-
         </Hero>
-        {/* <Container style={{marginTop: 30}}>
-            <Row>
-                <Col size='md-12'>
-                 </Col>
-            </Row>
-        </Container> */}
     </div>
     )
 }

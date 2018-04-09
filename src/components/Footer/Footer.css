@@ -2,14 +2,21 @@
     min-height: 50px;
     background: #E5E5E5;
     position: relative;
+    background-color: #2979ff;
+    border-top: 2px solid #0d47a1;
+    
   }
   
   .footer span {
+    height: 100%;
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
-    padding: 3px;
+    padding-top: 15px;
     background: #B8B8B8;
+    text-align: center;
+    background-color: #2979ff;
+    font-family: 'Archivo Narrow', sans-serif !important;
   }
   

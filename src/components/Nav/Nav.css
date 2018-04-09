@@ -1,6 +1,14 @@
-.navbar  {
-    background-color: #2979ff;
-}
+ 
+ .navbar li { color: #000 } 
+
 .nav-link,.navbar-brand{
     color: #0d47a1 !important;
+}
+
+nav.navbar.navbar-default {
+    margin-bottom: 0;
+  }
+
+.active .nav-link{
+    background-color:#0d47a1;
 }

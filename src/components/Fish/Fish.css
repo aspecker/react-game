@@ -1,6 +1,5 @@
 .card{
     background-color: #82b1ff;
-    border-radius: 3%;
     height: 225px;
     width: 325px;
     position: relative;
@@ -9,9 +8,11 @@
     padding: 10px 0px 0px 10px;
 }
 
+.card:hover{
+    background-color: darkblue;
+}
+
 .fish-img{
-    
     height: auto;
     width: 95%;
-    
 }

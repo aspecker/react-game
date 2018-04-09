@@ -1,10 +1,13 @@
 .scoreDiv {
     padding-top: 20px;
     text-align: center;
+    background-color: #82b1ff;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 .instruct{
     font-size: 1.6em;
 }
-.score-text{
-    
+.score-text,.instruct{
+    color: #1a237e;
 }
