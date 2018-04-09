@@ -3,7 +3,7 @@ import './Fish.css';
 import Col from '../Col';
 
 const Fish = props => (
-<Col size='md-4'>
+<Col size='md-4 s-6'>
   <div className = 'card'>
     <div className = 'img-container'>
     

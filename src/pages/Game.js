@@ -8,9 +8,7 @@ import Scoreboard from '../components/Scoreboard';
 
 
 class Game extends Component {
-    
     state = {
-
         fishList: fishArr,
         score: 0,
         highScore: 0,
@@ -18,7 +16,8 @@ class Game extends Component {
         losses: 0
     };
 
-    // gets the clicked fish from state and calls toggleclicked
+    // HELPER FUNCTIONS
+    // takes in fishList array from state and calls toggleClicked on the clicked fish
     arraySlice = (list,index) => {
         return [
         ...list.slice(0,index),
@@ -27,7 +26,7 @@ class Game extends Component {
         ]
     };
     
-    // changes clicked fish to false
+    // changes clicked fish clicked value to true
     toggleClicked = (fish) =>{
         return {
             ...fish,
@@ -35,12 +34,56 @@ class Game extends Component {
         };
     };
 
+    //finds the index of the clicked fish in the fishList from the state
+    findFishIndex = (array,id) =>{
+        const clickedFish = array.filter(fish=>fish.id===id);
+        return array.indexOf(clickedFish[0]);
+    }
+
+    //shuffles array order, triggered after each button click
+    shuffleArray = (array) => {
+        let shuffledArr = [];
+        array.map(fish=>{
+            let randomizer = Math.random();
+            randomizer > 0.5 ?
+            shuffledArr = [...shuffledArr,fish]
+            : shuffledArr = [fish,...shuffledArr]
+        });
+        return shuffledArr;
+    }
+
+    // GAME PLAY FUNCTIONS
+    // on click function, execture helper functions to update fish click status, score, and detect win or loss
+    handleClick = id =>{
+        const newScore = this.state.score + 1;
+        const fishIndex = this.findFishIndex(this.state.fishList, id);
+        if (this.state.fishList[fishIndex].clicked===true){
+            this.resetState(newScore-1);
+            this.handleWinLoss('loss');
+            return;
+        }
+        else if (newScore>=fishArr.length){
+            this.resetState(newScore-1);
+            this.handleWinLoss('win');
+            return;
+        } else {
+        const fishList = this.state.fishList;
+        const newFishList = this.shuffleArray(this.arraySlice(fishList,fishIndex));
+        this.setState({score: newScore, fishList: newFishList},()=>{
+            console.log(this.state);
+        })
+    }   
+    };
+
     // resets state to default values on game end
-    resetState = () =>{
+    resetState = (score) =>{
+        if (score>this.state.highScore){
+            this.setState({highScore: score})
+        }
         const scoreReset = 0;
         const fishReset = fishArr;
         this.setState({score: scoreReset, fishList: fishReset});
-    }
+    };
 
     //triggered on win or lose condition, resets state and adds to win or loss counter
     handleWinLoss = (outcome) =>{
@@ -55,28 +98,6 @@ class Game extends Component {
             newLosses ++;
             this.setState({losses: newLosses});
         }
-    }
-
-    // adds one to score
-    handleClick = id =>{
-        const newScore = this.state.score + 1;
-        if (this.state.fishList[id].clicked===true){
-            this.resetState();
-            this.handleWinLoss('loss');
-            return;
-        }
-        else if (newScore>=fishArr.length){
-            // alert('Win');
-            this.resetState();
-            this.handleWinLoss('win');
-            return;
-        } else {
-        const fishList = this.state.fishList;
-        const newFishList = this.arraySlice (fishList,id);
-        this.setState({score: newScore, fishList: newFishList},()=>{
-            console.log(this.state);
-        })
-    }   
     };
 
     // page render
@@ -85,7 +106,7 @@ class Game extends Component {
             <Container >
             <Row>
                 <Col size='md-12'>
-                    <Scoreboard score = {this.state.score} wins = {this.state.wins} losses={this.state.losses}/>
+                    <Scoreboard highScore = {this.state.highScore} score = {this.state.score} wins = {this.state.wins} losses={this.state.losses}> RANDOM TEXT </Scoreboard>
                 </Col>
             </Row>
             <div className = 'game-div'>
