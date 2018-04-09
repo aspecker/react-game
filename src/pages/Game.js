@@ -35,45 +35,51 @@ class Game extends Component {
         };
     };
 
+    // resets state to default values on game end
+    resetState = () =>{
+        const scoreReset = 0;
+        const fishReset = fishArr;
+        this.setState({score: scoreReset, fishList: fishReset});
+    }
 
+    //triggered on win or lose condition, resets state and adds to win or loss counter
+    handleWinLoss = (outcome) =>{
+        if (outcome==='win'){
+            alert("You won!");
+            let newWins = this.state.wins;
+            newWins ++;
+            this.setState({wins: newWins})
+        } else if (outcome==='loss'){
+            alert('You lost!');
+            let newLosses = this.state.losses;
+            newLosses ++;
+            this.setState({losses: newLosses});
+        }
+    }
+
+    // adds one to score
     handleClick = id =>{
         const newScore = this.state.score + 1;
-        if (newScore>5){
-            // alert('Win');
+        if (this.state.fishList[id].clicked===true){
             this.resetState();
+            this.handleWinLoss('loss');
             return;
         }
+        else if (newScore>=fishArr.length){
+            // alert('Win');
+            this.resetState();
+            this.handleWinLoss('win');
+            return;
+        } else {
         const fishList = this.state.fishList;
         const newFishList = this.arraySlice (fishList,id);
         this.setState({score: newScore, fishList: newFishList},()=>{
             console.log(this.state);
         })
-        
-        
+    }   
     };
 
-    // resets state to default values on game end
-   resetState = () =>{
-       const scoreReset = 0;
-       const fishReset = fishArr;
-       this.setState({score: scoreReset, fishList: fishReset});
-   }
-
-
-
-    
-    // handleClick = event => {
-
-    //     let newState = { ...this.state };
-    //     let newFishList = this.arraySlice(newState.fishList,event.target.id);
-
-    // }
-
-    // resetState = (newState) =>{
-    //     this.setState({fishList: fishList, score: 0, highScore: newState.highScore, wins: newState.wins, losses: newState.losses});
-    //     console.log(this.state);
-    // }
-
+    // page render
     render (){
         return(
             <Container >
