@@ -1,7 +1,7 @@
 .scoreDiv {
     padding-top: 20px;
     text-align: center;
-    background-color: #82b1ff;
+    background-color: rgb(119, 211, 255);
     margin-top: 10px;
     border-radius: 10px;
 }
@@ -9,5 +9,5 @@
     font-size: 1.6em;
 }
 .score-text,.instruct{
-    color: #1a237e;
+    color: rgb(0, 71, 106);
 }

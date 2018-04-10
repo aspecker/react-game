@@ -34,7 +34,7 @@ class Game extends Component {
         };
     };
 
-    //finds the index of the clicked fish in the fishList from the state
+    //finds the index of the clicked fish in the fishList from the state based on id
     findFishIndex = (array,id) =>{
         const clickedFish = array.filter(fish=>fish.id===id);
         return array.indexOf(clickedFish[0]);

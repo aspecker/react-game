@@ -1,18 +1,18 @@
 .card{
-    background-color: #82b1ff;
+    background-color: rgb(119, 211, 255);
     height: 225px;
     width: 325px;
     position: relative;
-    box-shadow: 0 3px 6px #1565c0, 0 3px 6px #1565c0;
+    box-shadow: 0 3px 6px rgb(0, 71, 106), 0 3px 6px rgb(0, 71, 106);
     margin-top: 20px; 
-    padding: 10px 0px 0px 10px;
+    padding: 10px 0px 16px 10px;
 }
 
 .card:hover{
-    background-color: darkblue;
+    background-color: rgb(12, 176, 255);
 }
 
 .fish-img{
     height: auto;
-    width: 95%;
+    width: 94%;
 }

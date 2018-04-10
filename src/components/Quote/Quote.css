@@ -1,9 +1,19 @@
-p {
+p,h4 {
     font-size: 2em;
-    color: white;
+    color: rgb(168, 227, 255);
+    line-height: 1.6em;
 }
 
 .quote{
-    margin-top: 10px;
-    border: 2px solid white;
+    margin-top: 20px;
+}
+.quote-text{
+    text-align: center;
+}
+.quote-author{
+    text-align: right;
+}
+
+h4{
+    border-bottom: 1px solid rgb(168, 227, 255);
 }
