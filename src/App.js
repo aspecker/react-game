@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import Overlay from './components/Overlay';
 
 const App = () => (
-<Router>
+<Router basename={process.env.PUBLIC_URL}>
     <div>
     <Nav />
     <Wrapper>
