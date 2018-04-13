@@ -58,7 +58,7 @@ class Game extends Component {
         const newScore = this.state.score + 1;
         const fishIndex = this.findFishIndex(this.state.fishList, id);
         if (this.state.fishList[fishIndex].clicked===true){
-            this.resetState(newScore-1);
+            this.resetState(newScore);
             this.handleWinLoss('loss');
             return;
         }
