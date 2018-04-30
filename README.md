@@ -1,8 +1,9 @@
 # React Memory Game 
-## GWU Bootcamp April 2018
+
 ## Adam Specker
 
-
 ### Description
-* Memory game with routing and API call built using react via create-react-app
-* first project attempt at using react
+* Memory game with built in react
+* Click each fish exactly once to win
+* If you click the same fish twice, you lose
+* Axios used for requests to quote of the day API
